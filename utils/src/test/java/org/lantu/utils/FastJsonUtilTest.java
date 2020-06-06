@@ -1,9 +1,12 @@
 package org.lantu.utils;
 
+import com.alibaba.fastjson.TypeReference;
 import org.junit.Test;
 import org.lantu.utils.json.FastJsonUtil;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,8 +24,15 @@ public class FastJsonUtilTest {
 		String s = FastJsonUtil.toJsonString(map);
 		System.out.println(s);
 //		Map<String, User> par = JSON.parseObject(s, new TypeReference<Map<String, User>>() {});
-		Map<String, User> par = FastJsonUtil.getGeneralTypeReferenceObject(s, new HashMap<String, User>());
-		System.out.println(par.get("1").toString());
+		Map<String, User> par = FastJsonUtil.getGeneralObject(s, new TypeReference<Map<String, User>>(){});
+		User user = par.get("1");
+		System.out.println(user.toString());
+		List<Map<String, String>> list = new ArrayList<>();
+		Map<String, String> map2 = new HashMap<>();
+		map2.put("jj", "rrr");
+		list.add(map2);
+		String s2 = FastJsonUtil.toJsonString(list);
+		List<Map<String, String>> list1 = FastJsonUtil.getGeneralList(s2, new TypeReference<List<Map<String, String>>>(){});
 	}
 
 }
