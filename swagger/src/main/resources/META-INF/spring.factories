@@ -1,2 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   org.lantu.autoconfigutre.DefaultSwaggerConfig
+org.springframework.context.ApplicationListener=\
+  org.lantu.config.DefaultServerConfig

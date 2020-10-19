@@ -18,10 +18,6 @@ public class DefaultServerConfig implements ApplicationListener<WebServerInitial
 
 	private int serverPort;
 
-	public int getServerPort() {
-		return serverPort;
-	}
-
 	@Override
 	public void onApplicationEvent(WebServerInitializedEvent event) {
 		try {
