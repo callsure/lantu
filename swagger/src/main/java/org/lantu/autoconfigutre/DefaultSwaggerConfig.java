@@ -47,9 +47,9 @@ public class DefaultSwaggerConfig {
 
 	private ApiInfo buildApiInf() {
 		return new ApiInfoBuilder()
-				.title("swagger构建api文档")
+				.title(swaggerProperties.getTitle() == null?"swagger构建api文档":swaggerProperties.getTitle())
 				.description("构建RESTful APIs")
-				.version("1.0")
+				.version(swaggerProperties.getVersion())
 				.build();
 	}
 
