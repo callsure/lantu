@@ -251,20 +251,14 @@
 
             <dependency>
                 <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
                 <version>${swagger.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.github.caspar-chen</groupId>
-                <artifactId>swagger-ui-layer</artifactId>
-                <version>${swagger-ui.version}</version>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>swagger-bootstrap-ui</artifactId>
+                <version>1.9.6</version>
             </dependency>
 
             <!-- 单元测试 -->

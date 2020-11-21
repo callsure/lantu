@@ -27,7 +27,7 @@ public class DefaultServerConfig implements ApplicationListener<WebServerInitial
 			try {
 				InetAddress inetAddress = Inet4Address.getLocalHost();
 				this.serverPort = event.getWebServer().getPort();
-				log.info("项目启动启动成功！接口文档地址: http://"+inetAddress.getHostAddress()+":"+serverPort+"/docs.html");
+				log.info("项目启动启动成功！接口文档地址: http://"+inetAddress.getHostAddress()+":"+serverPort+"/doc.html");
 			} catch (UnknownHostException e) {
 				log.error("{}", e);
 			}
